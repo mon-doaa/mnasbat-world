@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>منصة عالم المناسبات | بيوتي كيك & رقية للخياطة</title>
+    <title>رقة للخياطة النسائية الراقية</title>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
     
     <style>
@@ -73,7 +73,7 @@
         }
 
         .hero {
-            background: linear-gradient(rgba(44, 62, 80, 0.85), rgba(44, 62, 80, 0.85)), url('IMG-20250708-WA0001.jpg') no-repeat center center/cover;
+            background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.8)), url('dress1.jpg') no-repeat center center/cover;
             color: var(--white);
             height: 45vh;
             display: flex;
@@ -121,7 +121,7 @@
 
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
         }
 
@@ -132,45 +132,24 @@
             text-align: center;
             box-shadow: 0 4px 6px rgba(0,0,0,0.05);
             transition: transform 0.3s;
-            border-top: 4px solid var(--secondary);
+            border-top: 4px solid var(--primary);
         }
 
         .service-card:hover {
             transform: translateY(-5px);
         }
 
-        .image-gallery {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 10px;
-            margin-bottom: 20px;
-        }
-
-        .image-gallery img {
+        .image-container {
             width: 100%;
-            height: 150px;
-            object-fit: cover;
-            border-radius: 6px;
-            background-color: #f0f0f0;
-            cursor: pointer;
-            transition: opacity 0.2s;
-        }
-
-        .image-gallery img:hover {
-            opacity: 0.9;
-        }
-
-        .sewing-placeholder {
-            height: 150px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 50px;
+            height: 200px;
             background-color: #fcf1f4;
             border-radius: 6px;
             margin-bottom: 20px;
-            border: 2px dashed var(--primary);
-            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 60px;
+            border: 2px dashed #f3b1cd;
         }
 
         .service-card h3 {
@@ -256,12 +235,12 @@
     <header>
         <div class="header-container">
             <div class="logo">
-                <h1>عالم المناسبات ✨</h1>
+                <h1>رقة للخياطة النسائية الراقية ✨</h1>
             </div>
             <nav>
                 <ul>
                     <li><a href="#services">خدماتنا</a></li>
-                    <li><a href="#order">طلب خدمة</a></li>
+                    <li><a href="#order">طلب تفصيل</a></li>
                     <li><a href="#contact">اتصل بنا</a></li>
                 </ul>
             </nav>
@@ -269,117 +248,112 @@
     </header>
 
     <section class="hero">
-        <h2>نصنع لمناسباتكم ذكريات لا تُنسى</h2>
-        <p>مرحباً بكم في منصتكم المتكاملة التي تجمع بين أرقى خدمات الضيافة وصناعة الحلويات، وأحدث صيحات الخياطة والأناقة النسائية.</p>
-        <a href="#order" style="background-color: var(--secondary); color: var(--dark); padding: 12px 24px; text-decoration: none; border-radius: 4px; font-weight: 700; margin-top: 10px;">اطلب خدمتك الآن</a>
+        <h2>نصنع الأناقة بلمسات رفيعة تليق بجمالكِ</h2>
+        <p>مرحباً بكِ في عالم رقية للأناقة، حيث نتميز بتفصيل وتصميم أرقى الملابس النسائية، فساتين الأطفال، وأطقم أرواب الصلاة المنسقة.</p>
+        <a href="#order" style="background-color: var(--secondary); color: var(--dark); padding: 12px 24px; text-decoration: none; border-radius: 4px; font-weight: 700; margin-top: 10px;">اطلبي تفصيلكِ الآن</a>
     </section>
 
     <section class="section" id="services">
-        <h2 class="section-title">أقسامنا المتميزة</h2>
+        <h2 class="section-title">كتالوج وتصنيفات الخدمات</h2>
         <div class="services-grid">
             
-            <!-- قسم بيوتي كيك (الجاتوهات الأربعة فقط) -->
+            <!-- تصنيف فساتين الأطفال -->
             <div class="service-card">
-                <div class="image-gallery">
-                    <img src="IMG-20250708-WA0001.jpg" alt="جاتوه 1" onclick="selectService('كيك وحلويات (Beauty Cake)')">
-                    <img src="IMG-20250522-WA0003.jpg" alt="جاتوه 2" onclick="selectService('كيك وحلويات (Beauty Cake)')">
-                    <img src="IMG-20250517-WA0004.jpg" alt="جاتوه 3" onclick="selectService('كيك وحلويات (Beauty Cake)')">
-                    <img src="IMG-20250424-WA0005(2).jpg" alt="جاتوه 4" onclick="selectService('كيك وحلويات (Beauty Cake)')">
+                <div class="image-container">
+                    👶👗
                 </div>
-                <h3>🎂 بيوتي كيك (Beauty Cake)</h3>
-                <p>نقدم لكم تشكيلة فاخرة من الكيك المخصص للمناسبات، الحلويات الغربية والشرقية، ومستلزمات الحفلات المصنوعة بكل حب وإتقان.</p>
+                <h3>👧 فساتين الأطفال والبنوتات</h3>
+                <p>تصميم وتفصيل أرقى وأجمل فساتين الأطفال للمناسبات والأعياد بأقمشة مريحة وخياطة دقيقة ومتقنة.</p>
             </div>
             
-            <!-- قسم رقية للخياطة (نظيف وبدون أي كعكة وبأيقونة الخياطة الراقية) -->
-            <div class="service-card" style="border-top-color: var(--primary);">
-                <div class="sewing-placeholder" onclick="selectService('خياطة وتصميم (رقية للأناقة)')">
-                    🪡✨
+            <!-- تصنيف أرواب الصلاة -->
+            <div class="service-card">
+                <div class="image-container">
+                    🧕✨
                 </div>
-                <h3>🪡 رقية للخياطة النسائية الراقية</h3>
-                <p>تفصيل وتصميم أرقى فساتين الأطفال، الملابس النسائية، وأرواب الصلاة المنسقة، وجاهزون لتفصيل فساتين الكبار والأعراس بأعلى جودة.</p>
+                <h3>🕌 أرواب وأطقم الصلاة المنسقة</h3>
+                <p>خياطة أرواب صلاة فاخرة ومريحة وبألوان متناسقة مع السجادة والحقيبة، مجهزة بأجود أنواع الأقمشة الفاخرة.</p>
+            </div>
+
+            <!-- تصنيف فساتين الكبار والأعراس -->
+            <div class="service-card">
+                <div class="image-container">
+                    🪡👑
+                </div>
+                <h3>👗 الملابس النسائية وفساتين السهرة</h3>
+                <p>تفصيل فساتين الأعراس، المناسبات، والجلابيات الراقية، وتجسيد الموديلات والصور بأعلى مستويات الجودة والإإتقان.</p>
             </div>
             
         </div>
     </section>
 
     <section class="section" id="order">
-        <h2 class="section-title">📦 تأكيد وإرسال الطلب</h2>
+        <h2 class="section-title">📐 نموذج إرسال وتأكيد طلب التفصيل</h2>
         <div class="form">
             <div class="form-group">
                 <label>الاسم الكامل</label>
-                <input type="text" id="client-name" placeholder="مثال: بشاير ...">
+                <input type="text" id="client-name" placeholder="مثال: أمل ...">
             </div>
             <div class="form-group">
                 <label>رقم الهاتف (واتساب)</label>
                 <input type="text" id="client-phone" placeholder="77xxxxxxx">
             </div>
             <div class="form-group">
-                <label>القسم المطلوب</label>
+                <label>نوع الخدمة المطلوبة</label>
                 <select id="service-type">
-                    <option value="كيك وحلويات (Beauty Cake)">كيك وحلويات (Beauty Cake)</option>
-                    <option value="خياطة وتصميم (رقية للأناقة)">خياطة وتصميم (رقية للأناقة)</option>
-                    <option value="تنسيق مناسبة كاملة">تنسيق مناسبة كاملة</option>
+                    <option value="تفصيل فساتين أطفال">تفصيل فساتين أطفال</option>
+                    <option value="خياطة طقم / روب صلاة منسق">خياطة طقم / روب صلاة منسق</option>
+                    <option value="تفصيل فستان سهرة أو أعراس للكبار">تفصيل فستان سهرة أو أعراس للكبار</option>
+                    <option value="موديل خاص أو خياطة نسائية أخرى">موديل خاص أو خياطة نسائية أخرى</option>
                 </select>
             </div>
             <div class="form-group">
-                <label>العنوان بالتفصيل</label>
-                <input type="text" id="client-address" placeholder="مثال: اليمن - إب - شارع ...">
+                <label>العنوان (للتوصيل أو الاستلام)</label>
+                <input type="text" id="client-address" placeholder="اليمن - محافظة إب - ...">
             </div>
             <div class="form-group">
-                <label>تاريخ الاستلام المطلوب</label>
-                <input type="date" id="delivery-date">
+                <label>المقاسات وتفاصيل الموديل المطلوب</label>
+                <textarea id="order-details" rows="5" placeholder="اكتبي هنا الطول، العرض، نوع القماش، وأي إضافات أو تفاصيل للموديل..."></textarea>
             </div>
-            <div class="form-group">
-                <label>تفاصيل الطلب والخيارات المضافة</label>
-                <textarea id="order-details" rows="5" placeholder="اكتب هنا تفاصيل الحجم، الألوان، أو الموديل المطلوب..."></textarea>
-            </div>
-            <button class="btn" onclick="sendOrder()">📱 إرسال الطلب عبر الواتساب</button>
+            <button class="btn" onclick="sendOrder()">📱 إرسال تفاصيل التفصيل عبر الواتساب</button>
         </div>
     </section>
 
     <section class="section" id="contact" style="background-color: var(--white); border-radius: 8px;">
         <h2 class="section-title">📞 معلومات الاتصال والموقع</h2>
         <div style="text-align: center; line-height: 2;">
-            <p>📍 <strong>الموقع:</strong> اليمن - محافظة إب</p>
-            <p>🍰 <strong>بيوتي كيك (Beauty Cake):</strong> لجميع أنواع الكيك والحلويات الفاخرة</p>
-            <p>🪡 <strong>رقية للخياطة:</strong> رقية للخياطة النسائية الراقية وتصميم الأزياء</p>
-            <p>📱 <strong>رقم التواصل المباشر:</strong> 772357468</p>
-            <p style="margin-top: 20px; font-weight: 600; color: var(--primary);">✨ يسعدنا دائماً أن نكون جزءاً من أفراحكم ومناسباتكم السعيدة ✨</p>
+            <p>📍 <strong>الموقع الرئيسي:</strong> اليمن - محافظة إب</p>
+            <p>🪡 <strong>رقة للأناقة والجمال:</strong> جاهزون لتنفيذ كافة التصاميم وفساتين الكبار والصغار بدقة متناهية</p>
+            <p>📱 <strong>رقم التواصل والتنسيق المباشر:</strong> 772357468</p>
+            <p style="margin-top: 20px; font-weight: 600; color: var(--primary);">✨ يسعدنا دائماً أن ننسج لكِ خيوط الأناقة في جميع مناسباتكِ السعيدة ✨</p>
         </div>
     </section>
 
     <footer>
-        <p>جميع الحقوق محفوظة © عالم المناسبات ٢٠٢٦</p>
+        <p>جميع الحقوق محفوظة © رقة للخياطة النسائية الراقية ٢٠٢٦</p>
     </footer>
 
     <script>
-        function selectService(serviceName) {
-            document.getElementById('service-type').value = serviceName;
-            document.getElementById('order').scrollIntoView({ behavior: 'smooth' });
-        }
-
         function sendOrder() {
             const name = document.getElementById('client-name').value;
             const phone = document.getElementById('client-phone').value;
             const service = document.getElementById('service-type').value;
             const address = document.getElementById('client-address').value;
-            const date = document.getElementById('delivery-date').value;
             const details = document.getElementById('order-details').value;
 
             if(!name || !phone || !address) {
-                alert('الرجاء تعبئة الحقول الأساسية: الاسم، رقم الهاتف، والعنوان.');
+                alert('الرجاء تعبئة الحقول الأساسية لطلب التفصيل: الاسم، الهاتف، والعنوان.');
                 return;
             }
 
             const whatsappNumber = "967772357468";
             
-            const message = `*طلب جديد من منصة عالم المناسبات* 🌟\n\n` +
-                            `👤 *الاسم:* ${name}\n` +
+            const message = `*طلب تفصيل جديد من رقة للخياطة النسائية الراقية* 🪡✨\n\n` +
+                            `👤 *اسم العميل:* ${name}\n` +
                             `📱 *رقم التواصل:* ${phone}\n` +
-                            `🛍️ *القسم:* ${service}\n` +
+                            `🛍️ *الخدمة:* ${service}\n` +
                             `📍 *العنوان:* ${address}\n` +
-                            `📅 *تاريخ الاستلام:* ${date}\n` +
-                            `📝 *التفاصيل:* ${details}`;
+                            `📝 *المقاسات والمواصفات:* ${details}`;
 
             const encodedMessage = encodeURIComponent(message);
             const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
