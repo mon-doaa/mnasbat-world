@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عالم المناسبات | بيوتي كيك & رقية للخياطة</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #e91e63;
+            --primary-hover: #c2185b;
+            --secondary: #d4af37;
+            --dark: #2c3e50;
+            --light: #fff;
+            --bg: #f8f9fa;
+            --text: #333;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Cairo', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary), #8e24aa);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        header .logo {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 5px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        header p {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            overflow-x: auto;
+            background: white;
+            padding: 12px;
+            gap: 15px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 600;
+            padding: 8px 20px;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+            border: 1px solid #eee;
+        }
+
+        nav a:hover {
+            color: white;
+            background: var(--primary);
+            border-color: var(--primary);
+        }
+
+        .hero {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            color: var(--dark);
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .offer {
+            margin: 0 20px 30px 20px;
+            padding: 20px;
+            background: linear-gradient(135deg, #ff9800, #ff5722);
+            border-radius: 15px;
+            color: white;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(255,152,0,0.3);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+            100% { transform: scale(1); }
+        }
+
+        .section {
+            padding: 30px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 26px;
+            margin-bottom: 25px;
+            color: var(--dark);
+            border-right: 5px solid var(--primary);
+            padding-right: 15px;
+        }
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            background-color: #eaeaea;
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        .card h3 {
+            font-size: 20px;
+            color: var(--dark);
+            margin-bottom: 8px;
+        }
+
+        .card p {
+            color: #777;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            width: 100%;
+            padding: 12px;
+            border: none;
+            background: var(--primary);
+            color: white;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .btn:hover {
+            background: var(--primary-hover);
+        }
+
+        .btn-secondary {
+            background: #7f8c8d;
+        }
+        .btn-secondary:hover {
+            background: #95a5a6;
+        }
+
+        .form {
+            background: white;
+            padding: 25px;
+            border-radius: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 14px;
+            margin-top: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #e0e0e0;
+            border-radius: 12px;
+            font-size: 15px;
+            background: #fdfdfd;
+        }
+
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            background: #fff;
+        }
+
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+            margin-bottom: 8px;
+        }
+
+        .cart-item button {
+            background: #ff3333;
+            color: white;
+            border: none;
+            padding: 3px 10px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .empty-cart {
+            color: #999;
+            text-align: center;
+            padding: 15px;
+        }
+
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 25px;
+            text-align: center;
+            margin-top: 50px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">🎂👗 عالم المناسبات</div>
+        <p>بيوتي كيك & رقية للخياطة النسائية الراقية</p>
+    </header>
+
+    <nav>
+        <a href="#cake">الجاتوهات</a>
+        <a href="#dress">الخياطة</a>
+        <a href="#cart-section">السلة</a>
+        <a href="#order">إرسال الطلب</a>
+        <a href="#contact">التواصل</a>
+    </nav>
+
+    <section class="hero">
+        <h1>مرحباً بكم في عالم المناسبات</h1>
+        <p>نصنع لكِ أجمل تفاصيل حفلتكِ: كيكة فاخرة وإطلالة ساحرة</p>
+    </section>
+
+    <div class="offer" id="offers">
+        🎁 خصم 15% عند حجز باكيت متكامل (فستان + كيكة مناسبة)!
+    </div>
+
+    <section class="section" id="cake">
+        <h2 class="section-title">🎂 قسم بيوتي كيك (Beauty Cake)</h2>
+        <div class="products">
+            <div class="card">
+                <img src="cake1.jpg" alt="كيك أبيض وذهبي">
+                <div class="card-body">
+                    <h3>Happy Birthday Sara</h3>
+                    <p>تصميم فاخر باللون الأبيض والذهبي مع لمسات راقية.</p>
+                    <button class="btn" onclick="addCart('كيك: Happy Birthday Sara')">إضافة للسلة 🛒</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="cake2.jpg" alt="كيك خطوبة">
+                <div class="card-body">
+                    <h3>Asmaa & Omer</h3>
+                    <p>كيك مخصص لحفلات الخطوبة وعقد القرآن بألوان متناسقة.</p>
+                    <button class="btn" onclick="addCart('كيك: Asmaa & Omer')">إضافة للسلة 🛒</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="cake3.jpg" alt="جاتوه المهن">
+                <div class="card-body">
+                    <h3>جاتوه المهندس</h3>
+                    <p>تصميم مبتكر وخاص للمهن والتخرج حسب الطلب.</p>
+                    <button class="btn" onclick="addCart('كيك: جاتوه المهندس')">إضافة للسلة 🛒</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="dress">
+        <h2 class="section-title">👗 رقية للخياطة النسائية الراقية</h2>
+        <div class="products">
+            <div class="card">
+                <img src="dress1.jpg" alt="فستان أزرق">
+                <div class="card-body">
+                    <h3>فستان أطفال أزرق الملكي</h3>
+                    <p>خياطة وتفصيل راقٍ بأجود أنواع الأقمشة للمناسبات السعيدة.</p>
+                    <button class="btn" onclick="addCart('فستان: أطفال أزرق')">إضافة للسلة 🛒</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="dress2.jpg" alt="فستان وردي">
+                <div class="card-body">
+                    <h3>فستان حفلات وردي</h3>
+                    <p>تصميم ناعم ومبهج مناسب لأعياد الميلاد والحفلات.</p>
+                    <button class="btn" onclick="addCart('فستان: أطفال وردي')">إضافة للسلة 🛒</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="cart-section">
+        <h2 class="section-title">🛒 سلة المشتريات المختارة</h2>
+        <div class="form">
+            <div id="cart">
+                <p class="empty-cart">السلة فارغة حالياً، أضيفي بعض المنتجات من الأعلى ✨</p>
+            </div>
+            <button class="btn btn-secondary" style="margin-top: 15px; width: auto;" onclick="clearCart()">إفراغ السلة 🗑️</button>
+        </div>
+    </section>
+
+    <section class="section" id="order">
+        <h2 class="section-title">📦 تأكيد وإرسال الطلب</h2>
+        <div class="form">
+            <label>الاسم الكامل</label>
+            <input type="text" placeholder="مثال: بشاير ...">
+            
+            <label>رقم الهاتف (واتساب)</label>
+            <input type="text" placeholder="77xxxxxxx">
+            
+            <label>العنوان بالتفصيل</label>
+            <input type="text" placeholder="مثال: اليمن - إب - شارع ...">
+            
+            <label>تاريخ الاستلام المطلوب</label>
+            <input type="date">
+            
+            <label>تفاصيل الطلب والخيارات المضافة</label>
+            <textarea id="order-details" rows="5" placeholder="المنتجات المضافة من السلة ستظهر هنا تلقائياً..."></textarea>
+            
+            <button class="btn" onclick="sendOrder()">إرسال الطلب عبر الواتساب 📱</button>
+        </div>
+    </section>
+
+    <section class="section" id="contact">
+        <h2 class="section-title">📞 معلومات الاتصال والموقع</h2>
+        <div class="form" style="text-align: center; line-height: 2;">
+            <p>📍 <strong>الموقع:</strong> اليمن - محافظة إب</p>
+            <p>🎂 <strong>مطبخ الحلا:</strong> بيوتي كيك (Beauty Cake)</p>
+            <p>👗 <strong>مشغل الأناقة:</strong> رقية للخياطة النسائية الراقية</p>
+            <p>📱 <strong>رقم التواصل المباشر:</strong> 772357468</p>
+            <p>✨ يسعدنا دائماً أن نكون جزءاً من أفراحكم ومناسباتكم السعيدة ✨</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>جميع الحقوق محفوظة © عالم المناسبات 2026</p>
+    </footer>
+
+    <script>
+        let cart = [];
+        
+        // تم تفعيل رقم الواتساب الخاص بكِ هنا بنجاح
+        const myWhatsAppNumber = "967772357468"; 
+
+        function addCart(item) {
+            cart.push(item);
+            renderCart();
+        }
+
+        function removeItem(index) {
+            cart.splice(index, 1);
+            renderCart();
+        }
+
+        function clearCart() {
+            cart = [];
+            renderCart();
+        }
+
+        function renderCart() {
+            let cartDiv = document.getElementById("cart");
+            let detailsTextArea = document.getElementById("order-details");
+            
+            if(cart.length === 0) {
+                cartDiv.innerHTML = '<p class="empty-cart">السلة فارغة حالياً، أضيفي بعض المنتجات من الأعلى ✨</p>';
+                detailsTextArea.value = "";
+                return;
+            }
+
+            let html = "";
+            let textDetails = "أود طلب المنتجات التالية:\n";
+            
+            cart.forEach((item, index) => {
+                html += `
+                    <div class="cart-item">
+                        <span>✅ ${item}</span>
+                        <button onclick="removeItem(${index})">حذف</button>
+                    </div>
+                `;
+                textDetails += `- ${item}\n`;
+            });
+            
+            cartDiv.innerHTML = html;
+            detailsTextArea.value = textDetails + "\n[يرجى كتابة أي ملاحظات أو مقاسات خاصة هنا]";
+        }
+
+        function sendOrder() {
+            if(cart.length === 0) {
+                alert("رجاءً أضيفي منتجات إلى السلة أولاً قبل إرسال الطلب!");
+                return;
+            }
+
+            let inputs = document.querySelectorAll('#order input');
+            let name = inputs[0].value.trim();
+            let phone = inputs[1].value.trim();
+            let address = inputs[2].value.trim();
+            let date = inputs[3].value.trim();
+            let details = document.getElementById("order-details").value;
+
+            if(!name || !phone || !address || !date) {
+                alert("الرجاء تعبئة جميع الحقول (الاسم، الهاتف، العنوان، التاريخ) لتأكيد الطلب!");
+                return;
+            }
+
+            let message = `*طلب جديد من موقع عالم المناسبات* 🎂👗\n\n`;
+            message += `👤 *الاسم:* ${name}\n`;
+            message += `📱 *رقم التواصل:* ${phone}\n`;
+            message += `📍 *العنوان:* ${address}\n`;
+            message += `📅 *تاريخ الاستلام:* ${date}\n\n`;
+            message += `📝 *تفاصيل الطلب:*\n${details}`;
+
+            let encodedMessage = encodeURIComponent(message);
+            let whatsappURL = `https://api.whatsapp.com/send?phone=${myWhatsAppNumber}&text=${encodedMessage}`;
+
+            window.open(whatsappURL, '_blank');
+        }
+    </script>
+</body>
+                                                                            </html>
