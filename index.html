@@ -75,7 +75,7 @@
         .hero {
             background: linear-gradient(rgba(44, 62, 80, 0.85), rgba(44, 62, 80, 0.85)), url('IMG-20250708-WA0001.jpg') no-repeat center center/cover;
             color: var(--white);
-            height: 50vh;
+            height: 45vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -158,6 +158,19 @@
 
         .image-gallery img:hover {
             opacity: 0.9;
+        }
+
+        .sewing-placeholder {
+            height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 50px;
+            background-color: #fcf1f4;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            border: 2px dashed var(--primary);
+            cursor: pointer;
         }
 
         .service-card h3 {
@@ -265,21 +278,22 @@
         <h2 class="section-title">أقسامنا المتميزة</h2>
         <div class="services-grid">
             
+            <!-- قسم بيوتي كيك (الجاتوهات الأربعة فقط) -->
             <div class="service-card">
                 <div class="image-gallery">
-                    <img src="IMG-20250708-WA0001.jpg" alt="جاتوه الدب الأزرق" onclick="selectService('كيك وحلويات (Beauty Cake)')">
-                    <img src="IMG-20250522-WA0003.jpg" alt="جاتوه المهندس" onclick="selectService('كيك وحلويات (Beauty Cake)')">
-                    <img src="IMG-20250517-WA0004.jpg" alt="جاتوه سارة الذهبي" onclick="selectService('كيك وحلويات (Beauty Cake)')">
-                    <img src="IMG-20250424-WA0005(2).jpg" alt="جاتوه الورد الأبيض" onclick="selectService('كيك وحلويات (Beauty Cake)')">
+                    <img src="IMG-20250708-WA0001.jpg" alt="جاتوه 1" onclick="selectService('كيك وحلويات (Beauty Cake)')">
+                    <img src="IMG-20250522-WA0003.jpg" alt="جاتوه 2" onclick="selectService('كيك وحلويات (Beauty Cake)')">
+                    <img src="IMG-20250517-WA0004.jpg" alt="جاتوه 3" onclick="selectService('كيك وحلويات (Beauty Cake)')">
+                    <img src="IMG-20250424-WA0005(2).jpg" alt="جاتوه 4" onclick="selectService('كيك وحلويات (Beauty Cake)')">
                 </div>
                 <h3>🎂 بيوتي كيك (Beauty Cake)</h3>
                 <p>نقدم لكم تشكيلة فاخرة من الكيك المخصص للمناسبات، الحلويات الغربية والشرقية، ومستلزمات الحفلات المصنوعة بكل حب وإتقان.</p>
             </div>
             
+            <!-- قسم رقية للخياطة (نظيف وبدون أي كعكة وبأيقونة الخياطة الراقية) -->
             <div class="service-card" style="border-top-color: var(--primary);">
-                <div class="image-gallery">
-                    <img src="dress1.jpg" alt="فساتين أطفال وروب صلاة" onerror="this.src='IMG-20250708-WA0001.jpg'; this.style.opacity='0.1';">
-                    <img src="dress2.jpg" alt="ملابس نسائية راقية" onerror="this.style.display='none'">
+                <div class="sewing-placeholder" onclick="selectService('خياطة وتصميم (رقية للأناقة)')">
+                    🪡✨
                 </div>
                 <h3>🪡 رقية للخياطة النسائية الراقية</h3>
                 <p>تفصيل وتصميم أرقى فساتين الأطفال، الملابس النسائية، وأرواب الصلاة المنسقة، وجاهزون لتفصيل فساتين الكبار والأعراس بأعلى جودة.</p>
@@ -339,7 +353,6 @@
     </footer>
 
     <script>
-        // دالة الاختيار التلقائي والذكية
         function selectService(serviceName) {
             document.getElementById('service-type').value = serviceName;
             document.getElementById('order').scrollIntoView({ behavior: 'smooth' });
