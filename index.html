@@ -5,233 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>رقة للخياطة النسائية الراقية</title>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
-    
     <style>
-        :root {
-            --primary: #e91e63;
-            --primary-hover: #c2185b;
-            --secondary: #d4af37;
-            --dark: #2c3e50;
-            --light: #f9f9f9;
-            --white: #ffffff;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Cairo', sans-serif;
-        }
-
-        body {
-            background-color: var(--light);
-            color: var(--dark);
-            line-height: 1.6;
-        }
-
-        header {
-            background: linear-gradient(135deg, var(--dark), #1a252f);
-            color: var(--white);
-            padding: 20px 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-
-        .header-container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo h1 {
-            font-size: 24px;
-            color: var(--secondary);
-            font-weight: 700;
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 20px;
-        }
-
-        nav a {
-            color: var(--white);
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 15px;
-            transition: color 0.3s;
-        }
-
-        nav a:hover {
-            color: var(--secondary);
-        }
-
-        .hero {
-            background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.8)), url('dress1.jpg') no-repeat center center/cover;
-            color: var(--white);
-            height: 45vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 20px;
-        }
-
-        .hero h2 {
-            font-size: 34px;
-            margin-bottom: 15px;
-            color: var(--secondary);
-        }
-
-        .hero p {
-            font-size: 17px;
-            max-width: 600px;
-            margin-bottom: 25px;
-        }
-
-        .section {
-            padding: 50px 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 28px;
-            margin-bottom: 40px;
-            position: relative;
-            color: var(--dark);
-        }
-
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 60px;
-            height: 3px;
-            background-color: var(--primary);
-            margin: 10px auto 0;
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .service-card {
-            background-color: var(--white);
-            border-radius: 8px;
-            padding: 25px;
-            text-align: center;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            transition: transform 0.3s;
-            border-top: 4px solid var(--primary);
-        }
-
-        .service-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .image-container {
-            width: 100%;
-            height: 200px;
-            background-color: #fcf1f4;
-            border-radius: 6px;
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 60px;
-            border: 2px dashed #f3b1cd;
-        }
-
-        .service-card h3 {
-            margin-bottom: 15px;
-            color: var(--dark);
-            font-size: 22px;
-        }
-
-        .form {
-            background-color: var(--white);
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 600;
-        }
-
-        .form-group input, .form-group textarea, .form-group select {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            font-size: 15px;
-        }
-
-        .form-group input:focus, .form-group textarea:focus {
-            border-color: var(--primary);
-            outline: none;
-        }
-
-        .btn {
-            display: block;
-            width: 100%;
-            padding: 14px;
-            background-color: var(--primary);
-            color: var(--white);
-            border: none;
-            border-radius: 4px;
-            font-size: 16px;
-            font-weight: 700;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        .btn:hover {
-            background-color: var(--primary-hover);
-        }
-
-        footer {
-            background-color: var(--dark);
-            color: var(--white);
-            text-align: center;
-            padding: 30px 20px;
-            margin-top: 60px;
-        }
-
-        @media (max-width: 768px) {
-            .header-container {
-                flex-direction: column;
-                gap: 15px;
-            }
-            .hero h2 {
-                font-size: 26px;
-            }
-            .form {
-                padding: 20px;
-            }
-        }
+        :root { --primary: #e91e63; --primary-hover: #c2185b; --secondary: #d4af37; --dark: #2c3e50; --light: #f9f9f9; --white: #ffffff; }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Cairo', sans-serif; }
+        body { background-color: var(--light); color: var(--dark); line-height: 1.6; }
+        header { background: linear-gradient(135deg, var(--dark), #1a252f); color: var(--white); padding: 20px 0; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .header-container { width: 90%; max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .logo h1 { font-size: 24px; color: var(--secondary); font-weight: 700; }
+        nav ul { display: flex; list-style: none; gap: 20px; }
+        nav a { color: var(--white); text-decoration: none; font-weight: 600; font-size: 15px; transition: color 0.3s; }
+        nav a:hover { color: var(--secondary); }
+        .hero { background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.8)), url('dress1.jpg') no-repeat center center/cover; color: var(--white); height: 45vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 20px; }
+        .hero h2 { font-size: 34px; margin-bottom: 15px; color: var(--secondary); }
+        .hero p { font-size: 17px; max-width: 600px; margin-bottom: 25px; }
+        .section { padding: 50px 20px; max-width: 1200px; margin: 0 auto; }
+        .section-title { text-align: center; font-size: 28px; margin-bottom: 40px; position: relative; color: var(--dark); }
+        .section-title::after { content: ''; display: block; width: 60px; height: 3px; background-color: var(--primary); margin: 10px auto 0; }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .service-card { background-color: var(--white); border-radius: 8px; padding: 25px; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: transform 0.3s; border-top: 4px solid var(--primary); }
+        .service-card:hover { transform: translateY(-5px); }
+        .image-container { width: 100%; height: 200px; background-color: #fcf1f4; border-radius: 6px; margin-bottom: 20px; display: flex; align-items: center; justify-content: center; font-size: 60px; border: 2px dashed #f3b1cd; }
+        .service-card h3 { margin-bottom: 15px; color: var(--dark); font-size: 22px; }
+        .form { background-color: var(--white); max-width: 600px; margin: 0 auto; padding: 40px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; margin-bottom: 8px; font-weight: 600; }
+        .form-group input, .form-group textarea, .form-group select { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 4px; font-size: 15px; }
+        .form-group input:focus, .form-group textarea:focus { border-color: var(--primary); outline: none; }
+        .btn { display: block; width: 100%; padding: 14px; background-color: var(--primary); color: var(--white); border: none; border-radius: 4px; font-size: 16px; font-weight: 700; cursor: pointer; transition: background-color 0.3s; }
+        .btn:hover { background-color: var(--primary-hover); }
+        footer { background-color: var(--dark); color: var(--white); text-align: center; padding: 30px 20px; margin-top: 60px; }
+        @media (max-width: 768px) { .header-container { flex-direction: column; gap: 15px; } .hero h2 { font-size: 26px; } .form { padding: 20px; } }
     </style>
 </head>
 <body>
-
     <header>
         <div class="header-container">
             <div class="logo">
@@ -249,41 +55,28 @@
 
     <section class="hero">
         <h2>نصنع الأناقة بلمسات رفيعة تليق بجمالكِ</h2>
-        <p>مرحباً بكِ في عالم رقية للأناقة، حيث نتميز بتفصيل وتصميم أرقى الملابس النسائية، فساتين الأطفال، وأطقم أرواب الصلاة المنسقة.</p>
+        <p>مرحباً بكِ في عالم رقة للأناقة، حيث نتميز بتفصيل وتصميم أرقى الملابس النسائية، فساتين الأطفال، وأطقم أرواب الصلاة المنسقة.</p>
         <a href="#order" style="background-color: var(--secondary); color: var(--dark); padding: 12px 24px; text-decoration: none; border-radius: 4px; font-weight: 700; margin-top: 10px;">اطلبي تفصيلكِ الآن</a>
     </section>
 
     <section class="section" id="services">
         <h2 class="section-title">كتالوج وتصنيفات الخدمات</h2>
         <div class="services-grid">
-            
-            <!-- تصنيف فساتين الأطفال -->
             <div class="service-card">
-                <div class="image-container">
-                    👶👗
-                </div>
+                <div class="image-container">👶👗</div>
                 <h3>👧 فساتين الأطفال والبنوتات</h3>
                 <p>تصميم وتفصيل أرقى وأجمل فساتين الأطفال للمناسبات والأعياد بأقمشة مريحة وخياطة دقيقة ومتقنة.</p>
             </div>
-            
-            <!-- تصنيف أرواب الصلاة -->
             <div class="service-card">
-                <div class="image-container">
-                    🧕✨
-                </div>
+                <div class="image-container">🧕✨</div>
                 <h3>🕌 أرواب وأطقم الصلاة المنسقة</h3>
                 <p>خياطة أرواب صلاة فاخرة ومريحة وبألوان متناسقة مع السجادة والحقيبة، مجهزة بأجود أنواع الأقمشة الفاخرة.</p>
             </div>
-
-            <!-- تصنيف فساتين الكبار والأعراس -->
             <div class="service-card">
-                <div class="image-container">
-                    🪡👑
-                </div>
+                <div class="image-container">🪡👑</div>
                 <h3>👗 الملابس النسائية وفساتين السهرة</h3>
-                <p>تفصيل فساتين الأعراس، المناسبات، والجلابيات الراقية، وتجسيد الموديلات والصور بأعلى مستويات الجودة والإإتقان.</p>
+                <p>تفصيل فساتين الأعراس، المناسبات، والجلابيات الراقية، وتجسيد الموديلات والصور بأعلى مستويات الجودة والإتقان.</p>
             </div>
-            
         </div>
     </section>
 
@@ -323,7 +116,7 @@
         <h2 class="section-title">📞 معلومات الاتصال والموقع</h2>
         <div style="text-align: center; line-height: 2;">
             <p>📍 <strong>الموقع الرئيسي:</strong> اليمن - محافظة إب</p>
-            <p>🪡 <strong>رقة للأناقة والجمال:</strong> جاهزون لتنفيذ كافة التصاميم وفساتين الكبار والصغار بدقة متناهية</p>
+            <p>🪡 <strong>رقة للأناقة والجمال:</strong> تنفيذ كافة التصاميم وفساتين الكبار والصغار بدقة متناهية</p>
             <p>📱 <strong>رقم التواصل والتنسيق المباشر:</strong> 772357468</p>
             <p style="margin-top: 20px; font-weight: 600; color: var(--primary);">✨ يسعدنا دائماً أن ننسج لكِ خيوط الأناقة في جميع مناسباتكِ السعيدة ✨</p>
         </div>
@@ -340,25 +133,10 @@
             const service = document.getElementById('service-type').value;
             const address = document.getElementById('client-address').value;
             const details = document.getElementById('order-details').value;
-
-            if(!name || !phone || !address) {
-                alert('الرجاء تعبئة الحقول الأساسية لطلب التفصيل: الاسم، الهاتف، والعنوان.');
-                return;
-            }
-
+            if(!name || !phone || !address) { alert('الرجاء تعبئة الحقول الأساسية لطلب التفصيل: الاسم، الهاتف، والعنوان.'); return; }
             const whatsappNumber = "967772357468";
-            
-            const message = `*طلب تفصيل جديد من رقة للخياطة النسائية الراقية* 🪡✨\n\n` +
-                            `👤 *اسم العميل:* ${name}\n` +
-                            `📱 *رقم التواصل:* ${phone}\n` +
-                            `🛍️ *الخدمة:* ${service}\n` +
-                            `📍 *العنوان:* ${address}\n` +
-                            `📝 *المقاسات والمواصفات:* ${details}`;
-
-            const encodedMessage = encodeURIComponent(message);
-            const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
-            
-            window.open(whatsappURL, '_blank');
+            const message = `*طلب تفصيل جديد من رقة للخياطة النسائية الراقية* 🪡✨\n\n👤 *اسم العميل:* ${name}\n📱 *رقم التواصل:* ${phone}\n🛍️ *الخدمة:* ${service}\n📍 *العنوان:* ${address}\n📝 *المقاسات والمواصفات:* ${details}`;
+            window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`, '_blank');
         }
     </script>
 </body>
