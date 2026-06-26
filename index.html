@@ -73,9 +73,9 @@
         }
 
         .hero {
-            background: linear-gradient(rgba(44, 62, 80, 0.85), rgba(44, 62, 80, 0.85)), url('IMG-20250424-WA0005(2).jpg') no-repeat center center/cover;
+            background: linear-gradient(rgba(44, 62, 80, 0.85), rgba(44, 62, 80, 0.85)), url('IMG-20250708-WA0001.jpg') no-repeat center center/cover;
             color: var(--white);
-            height: 60vh;
+            height: 50vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -85,19 +85,19 @@
         }
 
         .hero h2 {
-            font-size: 36px;
+            font-size: 34px;
             margin-bottom: 15px;
             color: var(--secondary);
         }
 
         .hero p {
-            font-size: 18px;
+            font-size: 17px;
             max-width: 600px;
             margin-bottom: 25px;
         }
 
         .section {
-            padding: 60px 20px;
+            padding: 50px 20px;
             max-width: 1200px;
             margin: 0 auto;
         }
@@ -121,14 +121,14 @@
 
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 30px;
         }
 
         .service-card {
             background-color: var(--white);
             border-radius: 8px;
-            padding: 20px;
+            padding: 25px;
             text-align: center;
             box-shadow: 0 4px 6px rgba(0,0,0,0.05);
             transition: transform 0.3s;
@@ -139,17 +139,26 @@
             transform: translateY(-5px);
         }
 
-        .service-card img {
+        /* شبكة عرض الصور المحدثة لتكون متناسقة ومرتبة */
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .image-gallery img {
             width: 100%;
-            height: 220px;
+            height: 150px;
             object-fit: cover;
             border-radius: 6px;
-            margin-bottom: 15px;
+            background-color: #f0f0f0;
         }
 
         .service-card h3 {
             margin-bottom: 15px;
             color: var(--dark);
+            font-size: 22px;
         }
 
         .form {
@@ -216,7 +225,7 @@
                 gap: 15px;
             }
             .hero h2 {
-                font-size: 28px;
+                font-size: 26px;
             }
             .form {
                 padding: 20px;
@@ -250,16 +259,29 @@
     <section class="section" id="services">
         <h2 class="section-title">أقسامنا المتميزة</h2>
         <div class="services-grid">
+            
             <div class="service-card">
-                <img src="IMG-20250708-WA0001.jpg" alt="Beauty Cake">
+                <div class="image-gallery">
+                    <img src="IMG-20250708-WA0001.jpg" alt="جاتوه الدب">
+                    <img src="IMG-20250522-WA0003.jpg" alt="جاتوه الهندسة">
+                    <img src="cake1.jpg" alt="حلا إضافي" onerror="this.style.display='none'">
+                    <img src="cake2.jpg" alt="حلا إضافي" onerror="this.style.display='none'">
+                </div>
                 <h3>🎂 مطبخ الحلا (Beauty Cake)</h3>
                 <p>نقدم لكم تشكيلة فاخرة من الكيك المخصص للمناسبات، الحلويات الغربية والشرقية، ومستلزمات الحفلات المصنوعة بكل حب وإتقان.</p>
             </div>
+            
             <div class="service-card" style="border-top-color: var(--primary);">
-                <img src="IMG-20250522-WA0003.jpg" alt="رقية للخياطة">
+                <div class="image-gallery">
+                    <img src="IMG-20250517-WA0004.jpg" alt="فساتين أطفال">
+                    <img src="IMG-20250424-WA0005(2).jpg" alt="أروب صلاة">
+                    <img src="dress1.jpg" alt="فساتين أعراس" onerror="this.style.display='none'">
+                    <img src="dress2.jpg" alt="فساتين كبار" onerror="this.style.display='none'">
+                </div>
                 <h3>🪡 رقية للخياطة النسائية الراقية</h3>
-                <p>تفصيل وتصميم أرقى الفساتين، والجلابيات، والملابس النسائية لمختلف المناسبات بأيدي خبيرات يهتممن بأدق تفاصيل أناقتكِ.</p>
+                <p>تفصيل وتصميم أرقى فساتين الأطفال، الملابس النسائية، وأرواب الصلاة المنسقة، وجاهزون لتفصيل فساتين الكبار والأعراس بأعلى جودة.</p>
             </div>
+            
         </div>
     </section>
 
